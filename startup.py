@@ -449,10 +449,11 @@ def run_webui(started_event: mp.Event = None, run_mode: str = None):
     port = WEBUI_SERVER["port"]
 
     cmd = ["streamlit", "run", "webui.py",
+            "--server.enableCORS", "false",
             "--server.address", host,
             "--server.port", str(port),
             "--theme.base", "light",
-            "--theme.primaryColor", "#165dff",
+            "--theme.primaryColor", "#f5bd44",
             "--theme.secondaryBackgroundColor", "#f5f5f5",
             "--theme.textColor", "#000000",
         ]
